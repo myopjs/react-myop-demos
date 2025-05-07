@@ -68,10 +68,9 @@ You can integrate Myop components into your react application like so:
 import {MyopContainer} from "@myop/react";
 
 export const Component = ()=> {
-    return <MyopContainer 
-                flowId="{flowId from dashboard}"
-                componentId="{componentId from dashboard}
-           />;
+    return <MyopContainer
+               componentId={'8c72d29b-c8a0-41cf-b08f-4acca96c7a16'}
+               flowId={'49283058-a787-4fa5-b0d2-516b2e6dc5e3'} />;
 }
 ```
 
@@ -82,12 +81,12 @@ The `MyopContainer` component accepts any `props` that are passed down to the co
 The `MyopContainer` component also provides a `componentReady` event that you can use to communicate with your react component.
 
 ```tsx
-<myop-container
-  flowId="..."
-  componentId="..."
-  someProp1="123"
-  someProp2="456"
-  onReady={(myopComponent)=>{}}
+<MyopContainer
+        componentId={'8c72d29b-c8a0-41cf-b08f-4acca96c7a16'}
+        flowId={'49283058-a787-4fa5-b0d2-516b2e6dc5e3'}
+        someProp1="123"
+        someProp2="456"
+        onReady={(myopComponent)=>{}}
 />
 ```
 
