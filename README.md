@@ -63,8 +63,6 @@ Follow these steps to create a Myop WebComponent from your react component:
 
 You can integrate Myop components into your react application like so:
 
-### As a Component in Templates
-
 ```tsx
 
 import {MyopContainer} from "@myop/react";
