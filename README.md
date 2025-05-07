@@ -14,10 +14,6 @@ This guide explains how to integrate your React components with Myop, allowing y
 
 ## Exposing React Components
 
-There are two ways to expose your React components to Myop:
-
-### Direct Exposure
-
 Use the `expose` function to directly expose your React component:
 
 ```typescript
