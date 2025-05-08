@@ -2,13 +2,12 @@ import './ReactDemo.css';
 import {ReactIcon} from './ReactIcon.tsx';
 import {MyopIcon} from './MyopIcon.tsx';
 
-
-type ReactDemoProps = {
+interface IPropsType {
     onLikeClicked?: () => void;
     onCoolClicked?: () => void;
-};
+}
 
-export const ReactDemo = ({onLikeClicked, onCoolClicked}: ReactDemoProps) => {
+export const ReactDemo = (props: IPropsType) => {
 
     const localFunction = () => {
         alert('local function, prop not received');
@@ -34,12 +33,12 @@ export const ReactDemo = ({onLikeClicked, onCoolClicked}: ReactDemoProps) => {
 
                 <div className="buttons-container">
                     <button className="btn btn-outline"
-                            onClick={() => onLikeClicked ? onLikeClicked() : localFunction()}>
+                            onClick={props.onLikeClicked ? props.onLikeClicked : localFunction}>
                         Like it!
                     </button>
 
                     <button className="btn btn-primary"
-                            onClick={() => onCoolClicked ? onCoolClicked() : localFunction()}>
+                            onClick={props.onCoolClicked ? props.onCoolClicked : localFunction}>
                         Cool
                     </button>
                 </div>
