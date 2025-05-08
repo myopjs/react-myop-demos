@@ -28,10 +28,15 @@ function App() {
 
             </div>
 
-            {/*<div className="center">*/}
-            {/*    <MyopContainer componentId={'728a22c5-8e82-4adf-8afa-e284c6b09a40'}*/}
-            {/*                   flowId={"505b0cc5-d90b-41e0-8fe8-bf8b307da2aa"}/>*/}
-            {/*</div>*/}
+            <div className="center">
+                <MyopContainer componentId={'728a22c5-8e82-4adf-8afa-e284c6b09a40'}
+                               flowId={"505b0cc5-d90b-41e0-8fe8-bf8b307da2aa"}
+                               onLikeClicked={()=>{
+                                   alert('liked clicked')
+                               }}
+
+                />
+            </div>
 
             <div className="card">
 
