@@ -1,13 +1,12 @@
-import './ReactDemo.css';
-import {ReactIcon} from './ReactIcon.tsx';
-import {MyopIcon} from './MyopIcon.tsx';
+import {MyopIcon} from "../Icons/MyopIcon.tsx";
+import {ReactIcon} from "../Icons/ReactIcon.tsx";
 
 interface IPropsType {
     onLikeClicked?: () => void;
     onCoolClicked?: () => void;
 }
 
-export const ReactDemo = (props: IPropsType) => {
+export const DemoComponent = (props: IPropsType) => {
 
     const localFunction = () => {
         alert('local function, prop not received');
