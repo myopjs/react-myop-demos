@@ -1,5 +1,6 @@
 import {appendStyleToHost, expose, resolveRelativeToModule} from "@myop/react-remote";
 import {DemoComponent} from './components/DemoComponent/DemoComponent.tsx';
+import { DemoComponent2 } from "./components/DemoComponent2/DemoComponent2.tsx";
 
 expose(DemoComponent, 'react-demo', async () => {
 
@@ -17,6 +18,14 @@ expose(DemoComponent, 'react-demo', async () => {
     return {
         styles: [
             import('./components/DemoComponent/DemoComponent.css?raw'),
+        ]
+    }
+}).then();
+
+expose(DemoComponent, 'react-demo2', async () => {
+    return {
+        styles: [
+            import('./components/DemoComponent2/DemoComponent2.css?raw'),
         ]
     }
 }).then();
