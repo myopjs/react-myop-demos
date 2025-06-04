@@ -22,7 +22,7 @@ expose(DemoComponent, 'react-demo', async () => {
     }
 }).then();
 
-expose(DemoComponent, 'react-demo2', async () => {
+expose(DemoComponent2, 'react-demo2', async () => {
     return {
         styles: [
             import('./components/DemoComponent2/DemoComponent2.css?raw'),
