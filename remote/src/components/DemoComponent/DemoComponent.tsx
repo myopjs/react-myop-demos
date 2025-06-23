@@ -26,17 +26,19 @@ export const DemoComponent = (props: IPropsType) => {
                 </div>
 
                 <div className="content-text">
-                    <h2 className="title">Nice Component!</h2>
-                    <p className="subtitle">Made with Myop</p>
+                    <h2 className="title">Hey! I’m a Nice React Component.</h2>
+                    <p className="subtitle">Push me to production with Myop</p>
                 </div>
 
                 <div className="buttons-container">
                     <button className="btn btn-outline"
+                            myoop-id="buuton1"
                             onClick={props.onLikeClicked ? props.onLikeClicked : localFunction}>
                         Like it!
                     </button>
 
                     <button className="btn btn-primary"
+                            myoop-id="button2"
                             onClick={props.onCoolClicked ? props.onCoolClicked : localFunction}>
                         Cool
                     </button>
