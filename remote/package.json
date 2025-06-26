@@ -12,8 +12,8 @@
   "dependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "@myop/sdk" :  "^0.1.21",
-    "@myop/react-remote" : "^0.0.5"
+    "@myop/sdk": "npm:@myop-dev/sdk@latest",
+    "@myop/react-remote" : "npm:@myop-dev/react-remote@latest"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
