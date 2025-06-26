@@ -32,7 +32,7 @@ export const DemoComponent = (props: IPropsType) => {
 
                 <div className="buttons-container">
                     <button className="btn btn-outline"
-                            myop-id="buton1"
+                            myop-id="button1"
                             onClick={props.onLikeClicked ? props.onLikeClicked : localFunction}>
                         Like it!
                     </button>
