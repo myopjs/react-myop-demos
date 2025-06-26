@@ -1,9 +1,8 @@
-import {appendStyleToHost, expose, resolveRelativeToModule} from "@myop-temp/react-remote";
+import {appendStyleToHost, expose, resolveRelativeToModule} from "@myop/react-remote";
 import {DemoComponent} from './components/DemoComponent/DemoComponent.tsx';
-import { DemoComponent2 } from "./components/DemoComponent2/DemoComponent2.tsx";
+import {DemoComponent2} from "./components/DemoComponent2/DemoComponent2.tsx";
 
-expose(DemoComponent, 'react-demo', async () => {
-
+const appendCustomFontFace = ()=>{
     const style = `
         @font-face {
             font-family: 'priego';  /* Name you want to use for the font */
@@ -14,7 +13,10 @@ expose(DemoComponent, 'react-demo', async () => {
         }`;
 
     appendStyleToHost(style);
+};
 
+expose(DemoComponent, 'react-demo', async () => {
+    appendCustomFontFace();
     return {
         styles: [
             import('./components/DemoComponent/DemoComponent.css?raw'),
@@ -23,6 +25,7 @@ expose(DemoComponent, 'react-demo', async () => {
 }).then();
 
 expose(DemoComponent2, 'react-demo2', async () => {
+    appendCustomFontFace();
     return {
         styles: [
             import('./components/DemoComponent2/DemoComponent2.css?raw'),

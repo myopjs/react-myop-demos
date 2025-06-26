@@ -33,13 +33,13 @@ export const DemoComponent2 = (props: IPropsType) => {
 
                     <div className="buttons-container">
                         <button className="btn btn-outline"
-                            myoop-id="button1"
+                            myop-id="button1"
                             onClick={props.onMaybeClicked ? props.onMaybeClicked : localFunction}>
                             ,: maybe
                         </button>
 
                         <button className="btn btn-primary"
-                            myoop-id="button2"
+                            myop-id="button2"
                             onClick={props.onYesClicked ? props.onYesClicked : localFunction}>
                             (: yes
                         </button>
