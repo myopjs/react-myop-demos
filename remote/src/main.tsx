@@ -2,7 +2,7 @@ import {appendStyleToHost, expose, resolveRelativeToModule} from "@myop/react-re
 import {DemoComponent} from './components/DemoComponent/DemoComponent.tsx';
 import {DemoComponent2} from "./components/DemoComponent2/DemoComponent2.tsx";
 
-const appendCustomFontFace = ()=>{
+const appendCustomFontFace = () => {
     const style = `
         @font-face {
             font-family: 'priego';  /* Name you want to use for the font */
@@ -18,6 +18,8 @@ const appendCustomFontFace = ()=>{
 expose(DemoComponent, 'react-demo', async () => {
     appendCustomFontFace();
     return {
+        // ReactDOMClient: {},
+        // React: {},
         styles: [
             import('./components/DemoComponent/DemoComponent.css?raw'),
         ]
